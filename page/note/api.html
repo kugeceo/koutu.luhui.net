@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>鲁虺摄影照片急速抠图_在线抠图网站_在线抠图工具_速抠图</title>
+    <meta name="description"
+          content="鲁虺摄影照片急速抠图 koutu.luhui.net速抠图提供免费在线抠图工具和在线ps抠图软件，无需下载 Photoshop软件即可实现在线抠图及图片处理，支持智能抠图、钢笔抠图、矩阵抠图、拖选抠图、橡皮擦图、图案抠图、图片压缩、图片格式转换、高清图片处理等功能。"/>
+    <meta name="keywords" content="鲁虺摄影照片急速抠图,ps抠图,抠图软件,抠图网站,图片压缩,在线抠图,智能抠图,图片格式转换,钢笔抠图,抠图工具,速抠图"/>
+    <meta content="all" name="robots"/>
+    <meta content="koutu.luhui.net" name="copyright"/>
+    <meta content="koutu.luhui.net" name="author"/>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/note.min.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index_bak.html">速抠图</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+        </div>
+    </div>
+</nav>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">&nbsp;</div>
+        </div>
+        <div class="divWebLogo hid">
+            <img alt="抠图_在线抠图网站_在线ps抠图软件_速抠图" src="../../file/title.jpg" width="250" height="150">
+        </div>
+        <h1>速抠图 koutu.luhui.net</h1>
+        <p>鲁虺摄影照片急速抠图 koutu.luhui.net速抠图提供免费在线抠图工具和在线ps抠图软件，无需下载
+            Photoshop软件即可实现在线抠图及图片处理，支持智能抠图、钢笔抠图、矩阵抠图、拖选抠图、橡皮擦图、图案抠图、图片压缩、图片格式转换、高清图片处理等功能。</p>
+        <p class="hid">抠图,ps抠图,抠图软件,抠图网站,图片压缩,在线抠图,智能抠图,图片格式转换,钢笔抠图,抠图工具,速抠图</p>
+        <p><a class="btn btn-primary btn-lg" href="../../index_bak.html" target="_blank" role="button">开始抠图</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>商家接入</h2>
+            <p>为方便商家快速接入在线抠图服务，速抠图 提供了如下两种接入方式</p>
+            <p>1.开放链接方式</p>
+            <p>2.源码私有化部署方式</p>
+            <h3>已接入商家</h3>
+            <p><a class="btn btn-primary btn-sm" href="http://suxieban.luhui.net" target="_blank"
+                  title="画画_画图_思维导图_在线手写板_速写板">速写板</a></p>
+            <h3>开放链接</h3>
+            <p>通过弹窗（Iframe）嵌入速抠图地址进行裁剪并回传imageData或直接下载</p>
+            <dl>
+                <dt>1.不存在跨域问题,无缝对接</dt>
+                <dt>2.资源保护：图片裁剪操作及图片数据传递均在用户本地设备完成，不会上传至速抠图服务器。</dt>
+            </dl>
+            <h3>示例（Demo）</h3>
+            <p>
+                <img id="callImg" src="../../file/target.jpg"
+                     style="width: 200px;height: 200px; border: 1px dashed gray">
+            </p>
+            <p><a class="btn btn-primary btn-sm topWinCallBack"
+                  role="button">裁剪并回传imgData</a>&nbsp;<a class="btn btn-primary btn-sm topWin"
+                                                         role="button">裁剪并下载</a>&nbsp;
+            </p>
+            <br/>
+            <h5>原理：抠图弹窗为iframe,弹窗页面通过该函数跨域回调父页面传imageData。 window.parent.postMessage({ src: imgData }, '*')</h5>
+            <h4>地址： <b>https://koutu.luhui.net?is_callback={isCallBack}</b></h4>
+            <h4>说明</h4>
+            <pre>{isCallBack} 必填，声明是否回传裁剪图片imageData,值为(boolean)布尔类型，true或false，true:回传裁剪图片imageData数据;false:直接下载图片</pre>
+            <h4>当前页面声明调用和回调函数:</h4>
+            <pre>
+//声明回调函数（仅is_callback为true时必须声明回调函数，为false则不必声明）：抠图成功后，点击保存图片按钮回传imageData函数
+window.addEventListener('message',function(e){
+    if (undefined != e.data.src && null != e.data.src) {
+       //e.data.src为抠图的imageData(data:image/png;base64)
+       console.log(e.data.src);
+    }
+});
+            </pre>
+            <pre>
+//调用函数：通过图片imageData调用
+function initImgCutPanelByImgData(imgData) {
+     //获取图片裁剪弹窗Iframe对象，并传递imageData
+     //商家需将$(".layui-layer-content").find("iframe")[0]获取方式替换为自己的
+     $(".layui-layer-content").find("iframe")[0].contentWindow.postMessage({src: imgData}, "https://koutu.luhui.net");
+}
+
+//调用函数：通过图片地址调用
+function initImgCutPanelByImgSrc(imgSrc) {
+     var img = new Image();
+     img.src = imgSrc;
+     img.crossOrigin = 'anonymous';
+     img.onload = function () {
+         var canvas = document.createElement("canvas");
+         canvas.width = img.width;
+         canvas.height = img.height;
+         canvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
+         //获取图片裁剪弹窗Iframe对象，并传递imageData
+         //商家需将$(".layui-layer-content").find("iframe")[0]获取方式替换为自己的
+         $(".layui-layer-content").find("iframe")[0].contentWindow.postMessage({src: canvas.toDataURL('image/' + name.indexOf("png") == -1 ? "jpeg" : "png")}, "https://koutu.luhui.net");
+     }
+}
+            </pre>
+        </div>
+
+    </div>
+    <hr>
+    <footer>
+        <p> &copy; 2004-01-11 luhui.net All Rights Reserved </p>
+    </footer>
+</div> <!-- /container -->
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="../../js/layer/layer.js"></script>
+<script type="text/javascript">
+    var demoIndex = 0;
+    <!--dev-->
+    // var domain = "http://localhost:63342";
+    // var src = "http://localhost:63342/pencutout/static/file/target.jpg";
+    // var domainUrl = "http://localhost:63342/pencutout/static/index.html";
+    <!--prod-->
+    var domain = "https://koutu.luhui.net";
+    var src = "../../file/target.jpg";
+    var domainUrl = "https://koutu.luhui.net";
+    $(function () {
+        $(".topWin").click(function () {
+            demoIndex = layer.open({
+                title: "图片裁剪",
+                type: 2,
+                fixed: true,
+                maxmin: false,
+                content: [domainUrl + '?is_callback=false&t=' + Math.random(), 'no'],
+                area: ['100%', '100%'],
+                scrollbar: false,
+                success: function () {
+                    initImgCutPanelByImgSrc(src);
+                }
+            });
+            initImgCutPanelByImgSrc(src);
+        });
+        $(".topWinCallBack").click(function () {
+            demoIndex = layer.open({
+                title: "图片裁剪",
+                type: 2,
+                fixed: true,
+                maxmin: false,
+                content: [domainUrl + '?is_callback=true&t=' + Math.random(), 'no'],
+                area: ['100%', '100%'],
+                scrollbar: false,
+                success: function () {
+                    initImgCutPanelByImgSrc(src);
+                }
+            });
+
+        });
+    });
+    window.addEventListener('message', function (e) {
+        if (undefined != e.data.src && null != e.data.src) {
+            $("#callImg").attr("src", e.data.src);
+            layer.close(demoIndex);
+        }
+    });
+
+    function initImgCutPanelByImgSrc(imgSrc) {
+        var img = new Image();
+        img.src = imgSrc;
+        img.crossOrigin = 'anonymous';
+        img.onload = function () {
+            var canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            canvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
+            //获取图片裁剪弹窗Iframe对象，并传递imageData
+            $(".layui-layer-content").find("iframe")[0].contentWindow.postMessage({src: canvas.toDataURL('image/' + name.indexOf("png") == -1 ? "jpeg" : "png")}, domain);
+        }
+    }
+</script>
+</body>
+</html>
