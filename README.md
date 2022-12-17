@@ -12,3 +12,34 @@
  隐私保护: 图片操作均在您本地设备完成，不会上传 至 服务器及网络。
 
  每个人都是具有天赋的艺术家！让你的想象力在你的素材元素抠图分层中一步步成为现实！
+ 
+ 
+ 
+ Custom domains
+By default, your site is always accessible via a Netlify subdomain based on the site name. Custom domains allow you to access your site via one or more non-Netlify domain names.
+
+http://koutu.netlify.app
+Default subdomain
+
+Options
+http://koutu.luhui.net
+Primary domain
+ 
+ 
+ Status badges
+Netlify badges for your site
+
+Deploy status badge
+This image automatically updates to reflect the current state of your latest production deploy. To create a status badge for a deployed branch, add the ?branch= query parameter to the badge URL. You can use the markdown snippet below to add it to your project README.
+
+Deploy status badge
+[![Netlify Status](https://api.netlify.com/api/v1/badges/299a6958-d14e-4a55-9f6c-a30e577c7c3c/deploy-status)](https://app.netlify.com/sites/koutu/deploys)
+
+Learn more about status badges in the docs
+ 
+ 
+ 
+ 
+ 
+ 
+ 
