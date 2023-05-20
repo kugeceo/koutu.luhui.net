@@ -18,7 +18,7 @@
  
  
  
-![抠图展示](http://koutu.luhui.net/koutu20111217101108.jpg)
+![抠图展示](http://koutu.guanfu.org/koutu20111217101108.jpg)
 
  Custom domains
 By default, your site is always accessible via a Netlify subdomain based on the site name. Custom domains allow you to access your site via one or more non-Netlify domain names.
