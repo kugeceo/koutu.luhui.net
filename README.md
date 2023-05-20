@@ -40,6 +40,11 @@ This image automatically updates to reflect the current state of your latest pro
 Deploy status badge
 [![Netlify Status](https://api.netlify.com/api/v1/badges/299a6958-d14e-4a55-9f6c-a30e577c7c3c/deploy-status)](https://app.netlify.com/sites/koutu/deploys)
 
+
+http://koutu.guanfu.org/
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b6ba1c7b-26ee-408d-8101-8e2cd622f2b2/deploy-status)](https://app.netlify.com/sites/koutu/deploys)
+
 Learn more about status badges in the docs
  
  
